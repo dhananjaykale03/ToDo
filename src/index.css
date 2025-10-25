@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 245 100% 98%;
+    --foreground: 245 25% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 245 25% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 245 25% 8%;
+
+    --primary: 270 95% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 335 85% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 245 35% 94%;
+    --muted-foreground: 245 12% 42%;
+
+    --accent: 185 90% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 90% 62%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 245 35% 88%;
+    --input: 245 35% 88%;
+    --ring: 270 95% 65%;
+
+    --radius: 1.2rem;
+
+    /* Vibrant gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 95% 65%) 0%, hsl(335 85% 65%) 50%, hsl(350 90% 68%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(185 90% 58%) 0%, hsl(220 85% 62%) 50%, hsl(270 95% 65%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(335 85% 65%) 0%, hsl(270 95% 65%) 100%);
+    --gradient-bg: linear-gradient(135deg, hsl(245 100% 98%) 0%, hsl(270 100% 99%) 30%, hsl(335 100% 99%) 70%, hsl(350 100% 98%) 100%);
+    
+    /* Enhanced glow effects */
+    --glow-primary: 0 12px 48px hsl(270 95% 65% / 0.4);
+    --glow-secondary: 0 12px 48px hsl(335 85% 65% / 0.4);
+    --glow-accent: 0 12px 48px hsl(185 90% 58% / 0.4);
+    --glow-success: 0 12px 48px hsl(150 75% 52% / 0.5);
+    
+    /* Category colors */
+    --category-work: 335 85% 65%;
+    --category-personal: 270 95% 65%;
+    --category-shopping: 185 90% 58%;
+    --category-health: 150 75% 52%;
+    --category-other: 245 12% 42%;
+  }
+
+  .dark {
+    --background: 245 45% 6%;
+    --foreground: 245 12% 96%;
+
+    --card: 245 40% 10%;
+    --card-foreground: 245 12% 96%;
+
+    --popover: 245 40% 10%;
+    --popover-foreground: 245 12% 96%;
+
+    --primary: 270 95% 68%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 335 85% 68%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 245 35% 16%;
+    --muted-foreground: 245 12% 68%;
+
+    --accent: 185 90% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 90% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 245 35% 18%;
+    --input: 245 35% 18%;
+    --ring: 270 95% 68%;
+
+    /* Vibrant gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(270 95% 68%) 0%, hsl(335 85% 68%) 50%, hsl(350 90% 70%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(185 90% 62%) 0%, hsl(220 85% 65%) 50%, hsl(270 95% 68%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(335 85% 68%) 0%, hsl(270 95% 68%) 100%);
+    --gradient-bg: linear-gradient(135deg, hsl(245 45% 6%) 0%, hsl(270 45% 8%) 30%, hsl(335 45% 8%) 70%, hsl(350 45% 7%) 100%);
+    
+    /* Enhanced glow effects */
+    --glow-primary: 0 12px 48px hsl(270 95% 68% / 0.5);
+    --glow-secondary: 0 12px 48px hsl(335 85% 68% / 0.5);
+    --glow-accent: 0 12px 48px hsl(185 90% 62% / 0.5);
+    --glow-success: 0 12px 48px hsl(150 75% 55% / 0.6);
+    
+    /* Category colors */
+    --category-work: 335 85% 68%;
+    --category-personal: 270 95% 68%;
+    --category-shopping: 185 90% 62%;
+    --category-health: 150 75% 55%;
+    --category-other: 245 12% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
